@@ -7,18 +7,21 @@ function Item(props){
             <div onClick={()=>{
             props.setTotalItemCount(props.totalItemCount+1);
         }}>
-            Item1
+            Item
         </div>
         <button 
         onClick={()=>{
             props.setTotalItemCount(props.totalItemCount+1);
         }}
-        >Add</button><span> </span>
+        >+</button><span> </span>
         <button
         onClick={()=>{
-            props.setTotalItemCount(props.totalItemCount-1);
+            props.setTotalItemCount(()=>{
+                var totalCount= (props.totalItemCount==0) ? 0 :props.totalItemCount-1;
+                return totalCount;
+                });
         }}
-        >Remove</button>
+        >-</button>
         </div>
         
     )
