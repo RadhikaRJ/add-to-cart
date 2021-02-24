@@ -8,6 +8,13 @@ import DisplayMode from './Components/DisplayMode';
 
 function App() {
 
+
+  const [ItemList,setItemList]=useState({
+    item1:0,
+    item2:0,
+    item3:0
+  })
+
   const [totalItemCount, setTotalItemCount] = useState(0);
   const [mode,setMode] = useState(true);
 
