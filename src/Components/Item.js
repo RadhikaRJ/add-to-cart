@@ -21,7 +21,7 @@ function Item(props){
                 return totalCount;
                 });
         }}
-        >-</button>
+        >-</button><span> Qty: {} </span>
         </div>
         
     )

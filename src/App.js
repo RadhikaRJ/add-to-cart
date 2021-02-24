@@ -42,7 +42,8 @@ else return({
      
     <Cart totalItemCount={totalItemCount}/>
 
-    <Item setTotalItemCount={setTotalItemCount} totalItemCount={totalItemCount}/>
+    <Item setTotalItemCount={setTotalItemCount} totalItemCount={totalItemCount} ItemList={ItemList} setItemList={setItemList} />
+
     <Item setTotalItemCount={setTotalItemCount} totalItemCount={totalItemCount}/>
     
     
