@@ -4,6 +4,7 @@ import Cart from './Components/Cart';
 import Item from './Components/Item';
 import {useState} from "react";
 import { white } from 'ansi-colors';
+import DisplayMode from './Components/DisplayMode';
 
 function App() {
 
@@ -30,9 +31,8 @@ else return({
   return (
     <div className="App" style={setStyle()} >
       
-
-      <button onClick={()=>{setMode(!mode)}}>{mode?"Switch to light mode":"Switch to dark mode"}</button>
-      <br></br>
+    <DisplayMode mode={mode} setMode={setMode}/>
+     
     <Cart totalItemCount={totalItemCount}/>
 
     <Item setTotalItemCount={setTotalItemCount} totalItemCount={totalItemCount}/>
