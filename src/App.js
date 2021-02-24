@@ -10,13 +10,17 @@ function App() {
 
 
   const [ItemList,setItemList]=useState({
-    item1:0,
-    item2:0,
-    item3:0
+    item1:1,
+    item2:1,
+    item3:3
   })
+
 
   const [totalItemCount, setTotalItemCount] = useState(0);
   const [mode,setMode] = useState(true);
+
+
+
 
   function setStyle(){
     if(mode){
