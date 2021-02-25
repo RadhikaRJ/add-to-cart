@@ -9,7 +9,7 @@ function DisplayProducts(props){
         {
             props.itemListData.map((item)=>(
                 <div>
-                <div onClick={()=>{
+                <div onDoubleClick={()=>{
                     props.setTotalCartItemsCount(props.totalCartItemsCount+1)
                     
                     props.setItemsInCart(()=>{
