@@ -1,26 +1,40 @@
 
 import './App.css';
-import Cart from './Components/Cart';
-import Item from './Components/Item';
+
 import {useState} from "react";
-import { white } from 'ansi-colors';
+
 import DisplayMode from './Components/DisplayMode';
+import DisplayProducts from './Components/DisplayProducts';
+import Cart from './Components/Cart';
+
 
 function App() {
 
 
-  const [ItemList,setItemList]=useState({
-    item1:1,
-    item2:1,
-    item3:3
-  })
+  const itemListData=[
+    
+    {
+      itemName: "item1",
+      itemUnitPrice: 10,
+      itemQtyInCart:0
+    },
+    {
+      itemName: "item2",
+      itemUnitPrice: 20,
+      itemQtyInCart:0
+    },
+    {
+      itemName: "item3",
+      itemUnitPrice: 30,
+      itemQtyInCart:0
+    }
+  ]
 
-
-  const [totalItemCount, setTotalItemCount] = useState(0);
+  
   const [mode,setMode] = useState(true);
-
-
-
+  
+  const[totalCartItemsCount,setTotalCartItemsCount]=useState(0);
+  const [itemsInCart,setItemsInCart]=useState([ ])
 
   function setStyle(){
     if(mode){
@@ -43,15 +57,11 @@ else return({
     <div className="App" style={setStyle()} >
       
     <DisplayMode mode={mode} setMode={setMode}/>
-     
-    <Cart totalItemCount={totalItemCount}/>
-
-    <Item setTotalItemCount={setTotalItemCount} totalItemCount={totalItemCount} ItemList={ItemList} setItemList={setItemList} />
-
-    <Item setTotalItemCount={setTotalItemCount} totalItemCount={totalItemCount}/>
     
+    <DisplayProducts itemListData={itemListData} setTotalCartItemsCount={setTotalCartItemsCount} totalCartItemsCount={totalCartItemsCount} itemsInCart={itemsInCart} setItemsInCart={setItemsInCart}/>
     
-    
+    <Cart totalCartItemsCount={totalCartItemsCount} setTotalCartItemsCount={setTotalCartItemsCount} itemsInCart={itemsInCart} setItemsInCart={setItemsInCart}/>
+   
     
     </div>
 

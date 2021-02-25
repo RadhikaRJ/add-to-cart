@@ -4,8 +4,15 @@ function  Cart(props){
 
     return(
         <div>
-        <p>Cart total items: {props.totalItemCount}</p>
-        
+        <p>Cart total items: {props.totalCartItemsCount}</p>
+        <div>
+            {
+                props.itemsInCart.map((item)=>(
+
+                     <div>{item.itemName}</div>
+                ))
+            }
+        </div>
         
         </div>
     )
