@@ -17,13 +17,13 @@ function App() {
       itemName: "item1",
       itemUnitPrice: 10,
       itemQtyInCart:0,
-      itemQtyAvailable:1
+      itemQtyAvailable:0
     },
     {
       itemName: "item2",
       itemUnitPrice: 20,
       itemQtyInCart:0,
-      itemQtyAvailable:0
+      itemQtyAvailable:2
     },
     {
       itemName: "item3",

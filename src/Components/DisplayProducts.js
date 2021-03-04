@@ -10,7 +10,6 @@ function DisplayProducts(props){
             return(
                { disabled:"true",
                 pointerEvents:"none",
-               
                 backgroundColor:"lightgray"
                })
         }
@@ -34,7 +33,11 @@ function DisplayProducts(props){
                 <span>Price: {item.itemUnitPrice}</span><br></br>
                 <span>Stock Availability: {item.itemQtyAvailable}</span>
                  <br></br>
-                <button 
+                <button style={
+              item.itemQtyAvailable == 0
+                ? { backgroundColor: "lightgray" }
+                : { backgroundColor: "pink" }
+            }
                 onClick={()=>{
                     props.setTotalCartItemsCount(props.totalCartItemsCount+1)
                     
