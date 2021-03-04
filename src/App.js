@@ -16,17 +16,20 @@ function App() {
     {
       itemName: "item1",
       itemUnitPrice: 10,
-      itemQtyInCart:0
+      itemQtyInCart:0,
+      itemQtyAvailable:1
     },
     {
       itemName: "item2",
       itemUnitPrice: 20,
-      itemQtyInCart:0
+      itemQtyInCart:0,
+      itemQtyAvailable:0
     },
     {
       itemName: "item3",
       itemUnitPrice: 30,
-      itemQtyInCart:0
+      itemQtyInCart:0,
+      itemQtyAvailable:1
     }
   ]
 

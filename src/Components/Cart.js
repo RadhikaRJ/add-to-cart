@@ -9,7 +9,7 @@ function  Cart(props){
             {
                 props.itemsInCart.map((item)=>(
 
-                     <div>{item.itemName}</div>
+                     <div>{item.itemName}  Qty:{item.itemQtyInCart}</div>
                 ))
             }
         </div>
