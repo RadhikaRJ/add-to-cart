@@ -5,7 +5,7 @@ function DisplayProducts(props){
  
    
     function greyOnNotAvailable(i){
-        if(i==0){
+        if(i===0){
             console.log("this is executed"+props.itemListData.itemQtyAvailable)
             return(
                { disabled:"true",
@@ -34,7 +34,7 @@ function DisplayProducts(props){
                 <span>Stock Availability: {item.itemQtyAvailable}</span>
                  <br></br>
                 <button style={
-              item.itemQtyAvailable == 0
+              item.itemQtyAvailable === 0
                 ? { backgroundColor: "lightgray" }
                 : { backgroundColor: "pink" }
             }
